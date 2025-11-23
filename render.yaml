@@ -1,0 +1,22 @@
+services:
+  # Backend API
+  - type: web
+    name: career-analyzer-api
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+
+  # Frontend Static Site
+  - type: web
+    name: career-analyzer-frontend
+    runtime: static
+    buildCommand: cd client && npm install && npm run build
+    staticPublishPath: ./client/dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://career-analyzer-api-13i0.onrender.com/api
