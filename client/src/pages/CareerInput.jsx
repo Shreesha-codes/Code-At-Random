@@ -81,8 +81,14 @@ const CareerInput = () => {
 
   return (
     <div className="career-input-container">
+      {/* Animated planets */}
+      <div className="planet planet-1"></div>
+      <div className="planet planet-2"></div>
+      <div className="planet planet-3"></div>
+      <div className="planet planet-4"></div>
+      
       <div className="career-input-card">
-        <h1>Analyze Your Career Path</h1>
+        <h1>🚀 Analyze Your Career Path</h1>
         <p className="subtitle">
           Enter your target role and current skills to get personalized insights
         </p>
@@ -96,12 +102,12 @@ const CareerInput = () => {
               name="targetRole"
               value={formData.targetRole}
               onChange={handleChange}
-              placeholder="e.g., FrontendDeveloper, Backend Developer, Data Analyst"
+              placeholder="e.g., frontend developer, BACKEND DEVELOPER, data analyst"
               className="input-field"
               disabled={loading}
             />
             <small className="hint">
-              Available roles: FrontendDeveloper, Backend Developer, Data Analyst
+              Available roles (case-insensitive): FrontendDeveloper, Backend Developer, Data Analyst
             </small>
           </div>
 
@@ -112,7 +118,7 @@ const CareerInput = () => {
               name="currentSkills"
               value={formData.currentSkills}
               onChange={handleChange}
-              placeholder="e.g., HTML, CSS, JavaScript, Git"
+              placeholder="e.g., html, CSS, JAVASCRIPT, git (case-insensitive)"
               className="textarea-field"
               rows="4"
               disabled={loading}
