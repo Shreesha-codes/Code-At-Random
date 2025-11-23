@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const { generateRoadmap } = require('../utils/roadmapGenerator');
 
 /**
  * @route   POST /api/roadmap/generate
@@ -129,6 +130,39 @@ router.get('/templates', (req, res, next) => {
       count: templates.length,
       data: templates
     });
+  } catch (error) {
+    next(error);
+  }
+});
+
+/**
+ * @route   POST /api/roadmap
+ * @desc    Generate a 3-phase learning roadmap for a role
+ * @access  Public
+ */
+router.post('/', async (req, res, next) => {
+  try {
+    const { role } = req.body;
+
+    // Validation
+    if (!role) {
+      return res.status(400).json({
+        success: false,
+        message: 'role is required'
+      });
+    }
+
+    // Generate roadmap using utility function
+    const roadmap = generateRoadmap(role);
+
+    res.json({
+      success: true,
+      data: {
+        role,
+        roadmap
+      }
+    });
+
   } catch (error) {
     next(error);
   }
