@@ -58,8 +58,13 @@ function generateRoadmap(role) {
     ]
   };
 
+  // Case-insensitive role matching
+  const roleKey = Object.keys(roadmaps).find(
+    key => key.toLowerCase().replace(/\s+/g, '') === role.toLowerCase().replace(/\s+/g, '')
+  );
+  
   // Return role-specific roadmap or generic fallback
-  return roadmaps[role] || [
+  return roadmaps[roleKey] || [
     {
       phase: 'Phase 1',
       duration: '1–2 months',

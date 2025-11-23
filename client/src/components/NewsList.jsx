@@ -5,7 +5,7 @@ const NewsList = ({ news, loading, error }) => {
   if (loading) {
     return (
       <div className="news-list">
-        <h2>📰 Latest Tech News</h2>
+        <h2> Latest Tech News</h2>
         <div className="loading-state">
           <div className="spinner"></div>
           <p>Loading news...</p>
@@ -17,9 +17,9 @@ const NewsList = ({ news, loading, error }) => {
   if (error) {
     return (
       <div className="news-list">
-        <h2>📰 Latest Tech News</h2>
+        <h2> Latest Tech News</h2>
         <div className="error-state">
-          <p>⚠️ {error}</p>
+          <p> {error}</p>
         </div>
       </div>
     );
@@ -28,7 +28,7 @@ const NewsList = ({ news, loading, error }) => {
   if (!news || news.length === 0) {
     return (
       <div className="news-list">
-        <h2>📰 Latest Tech News</h2>
+        <h2> Latest Tech News</h2>
         <p className="no-data">No news available</p>
       </div>
     );
@@ -36,7 +36,7 @@ const NewsList = ({ news, loading, error }) => {
 
   return (
     <div className="news-list">
-      <h2>📰 Latest Tech News</h2>
+      <h2> Latest Tech News</h2>
       <div className="news-grid">
         {news.map((article) => (
           <div key={article.id} className="news-card">
@@ -49,12 +49,12 @@ const NewsList = ({ news, loading, error }) => {
               {article.title}
             </a>
             <div className="news-meta">
-              <span className="news-score">⭐ {article.score} points</span>
-              <span className="news-author">👤 {article.by}</span>
-              <span className="news-type">📌 {article.type}</span>
+              <span className="news-score"> {article.score} points</span>
+              <span className="news-author"> {article.by}</span>
+              <span className="news-type"> {article.type}</span>
             </div>
             <div className="news-date">
-              🕒 {new Date(article.time * 1000).toLocaleString()}
+               {new Date(article.time * 1000).toLocaleString()}
             </div>
           </div>
         ))}

@@ -151,8 +151,12 @@ router.post('/', async (req, res, next) => {
       });
     }
 
-    // Get required skills for target role
-    const requiredSkills = roleSkillsData[targetRole];
+    // Get required skills for target role (case-insensitive)
+    const roleKey = Object.keys(roleSkillsData).find(
+      key => key.toLowerCase().replace(/\s+/g, '') === targetRole.toLowerCase().replace(/\s+/g, '')
+    );
+    
+    const requiredSkills = roleKey ? roleSkillsData[roleKey] : null;
     
     if (!requiredSkills) {
       return res.status(404).json({

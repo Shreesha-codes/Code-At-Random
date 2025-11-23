@@ -15,10 +15,10 @@ const SkillGapResult = ({ skillGap }) => {
 
   return (
     <div className="skill-gap-result">
-      <h2>📊 Skill Gap Analysis</h2>
+      <h2> Skill Gap Analysis</h2>
 
       <div className="section">
-        <h3 className="section-title matched">✅ Matched Skills</h3>
+        <h3 className="section-title matched"> Matched Skills</h3>
         {matchedSkills && matchedSkills.length > 0 ? (
           <ul className="skill-list">
             {matchedSkills.map((skill, index) => (
@@ -31,7 +31,7 @@ const SkillGapResult = ({ skillGap }) => {
       </div>
 
       <div className="section">
-        <h3 className="section-title missing">❌ Missing Skills</h3>
+        <h3 className="section-title missing"> Missing Skills</h3>
         {missingSkills && missingSkills.length > 0 ? (
           <ul className="skill-list">
             {missingSkills.map((skill, index) => (
@@ -44,12 +44,12 @@ const SkillGapResult = ({ skillGap }) => {
       </div>
 
       <div className="section">
-        <h3 className="section-title">💡 Recommendations</h3>
+        <h3 className="section-title"> Recommendations</h3>
         <p className="recommendation-text">{recommendations}</p>
       </div>
 
       <div className="section">
-        <h3 className="section-title">📚 Suggested Learning Order</h3>
+        <h3 className="section-title"> Suggested Learning Order</h3>
         {suggestedLearningOrder && suggestedLearningOrder.length > 0 ? (
           <ol className="learning-order-list">
             {suggestedLearningOrder.map((skill, index) => (
