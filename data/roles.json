@@ -1,0 +1,113 @@
+{
+  "roles": [
+    {
+      "id": 1,
+      "name": "Full Stack Developer",
+      "category": "Development",
+      "description": "Develops both frontend and backend of web applications",
+      "requiredSkills": [
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "REST API",
+        "Git",
+        "HTML",
+        "CSS"
+      ],
+      "averageSalary": "$85,000 - $130,000",
+      "demandLevel": "High"
+    },
+    {
+      "id": 2,
+      "name": "Frontend Developer",
+      "category": "Development",
+      "description": "Creates user interfaces and client-side functionality",
+      "requiredSkills": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "TypeScript",
+        "Redux",
+        "Webpack",
+        "Responsive Design"
+      ],
+      "averageSalary": "$70,000 - $115,000",
+      "demandLevel": "High"
+    },
+    {
+      "id": 3,
+      "name": "Backend Developer",
+      "category": "Development",
+      "description": "Builds server-side logic and database management",
+      "requiredSkills": [
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "PostgreSQL",
+        "REST API",
+        "Docker",
+        "AWS",
+        "Microservices"
+      ],
+      "averageSalary": "$80,000 - $125,000",
+      "demandLevel": "High"
+    },
+    {
+      "id": 4,
+      "name": "Data Scientist",
+      "category": "Data Science",
+      "description": "Analyzes complex data to help organizations make decisions",
+      "requiredSkills": [
+        "Python",
+        "Machine Learning",
+        "Pandas",
+        "NumPy",
+        "SQL",
+        "Statistics",
+        "TensorFlow",
+        "Data Visualization"
+      ],
+      "averageSalary": "$95,000 - $150,000",
+      "demandLevel": "Very High"
+    },
+    {
+      "id": 5,
+      "name": "DevOps Engineer",
+      "category": "Operations",
+      "description": "Manages infrastructure and deployment pipelines",
+      "requiredSkills": [
+        "Docker",
+        "Kubernetes",
+        "AWS",
+        "CI/CD",
+        "Linux",
+        "Git",
+        "Terraform",
+        "Monitoring"
+      ],
+      "averageSalary": "$90,000 - $140,000",
+      "demandLevel": "Very High"
+    },
+    {
+      "id": 6,
+      "name": "Mobile Developer",
+      "category": "Development",
+      "description": "Creates applications for mobile devices",
+      "requiredSkills": [
+        "React Native",
+        "iOS",
+        "Android",
+        "JavaScript",
+        "Swift",
+        "Kotlin",
+        "Mobile UI/UX",
+        "API Integration"
+      ],
+      "averageSalary": "$75,000 - $120,000",
+      "demandLevel": "High"
+    }
+  ]
+}

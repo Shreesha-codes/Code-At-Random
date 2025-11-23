@@ -1,0 +1,98 @@
+{
+  "roadmapTemplates": [
+    {
+      "role": "Full Stack Developer",
+      "duration": "6-12 months",
+      "difficulty": "Medium to Hard",
+      "phases": [
+        {
+          "name": "Frontend Basics",
+          "duration": "6-8 weeks",
+          "skills": ["HTML", "CSS", "JavaScript"],
+          "projects": [
+            "Personal Portfolio Website",
+            "Landing Page with Responsive Design",
+            "Interactive To-Do List"
+          ]
+        },
+        {
+          "name": "Frontend Framework",
+          "duration": "6-8 weeks",
+          "skills": ["React", "Redux", "React Router"],
+          "projects": [
+            "Weather App with API Integration",
+            "E-commerce Product Catalog",
+            "Social Media Dashboard"
+          ]
+        },
+        {
+          "name": "Backend Development",
+          "duration": "8-10 weeks",
+          "skills": ["Node.js", "Express", "MongoDB", "REST API"],
+          "projects": [
+            "RESTful API for Blog",
+            "Authentication System",
+            "Real-time Chat Application"
+          ]
+        },
+        {
+          "name": "Full Stack Integration",
+          "duration": "6-8 weeks",
+          "skills": ["Full Stack Architecture", "Deployment", "Testing"],
+          "projects": [
+            "Full Stack E-commerce Platform",
+            "Task Management Application",
+            "Social Network Clone"
+          ]
+        }
+      ]
+    },
+    {
+      "role": "Data Scientist",
+      "duration": "8-12 months",
+      "difficulty": "Hard",
+      "phases": [
+        {
+          "name": "Programming Foundation",
+          "duration": "6-8 weeks",
+          "skills": ["Python", "SQL", "Git"],
+          "projects": [
+            "Data Analysis Scripts",
+            "Database Queries Practice",
+            "Python Automation Tools"
+          ]
+        },
+        {
+          "name": "Data Analysis & Visualization",
+          "duration": "8-10 weeks",
+          "skills": ["Pandas", "NumPy", "Matplotlib", "Seaborn"],
+          "projects": [
+            "Exploratory Data Analysis",
+            "Sales Data Dashboard",
+            "Customer Segmentation Analysis"
+          ]
+        },
+        {
+          "name": "Machine Learning Basics",
+          "duration": "10-12 weeks",
+          "skills": ["Scikit-learn", "Statistics", "Feature Engineering"],
+          "projects": [
+            "House Price Prediction",
+            "Customer Churn Prediction",
+            "Sentiment Analysis"
+          ]
+        },
+        {
+          "name": "Advanced ML & Deep Learning",
+          "duration": "12-14 weeks",
+          "skills": ["TensorFlow", "PyTorch", "Deep Learning", "NLP"],
+          "projects": [
+            "Image Classification Model",
+            "Text Generation with NLP",
+            "Recommender System"
+          ]
+        }
+      ]
+    }
+  ]
+}

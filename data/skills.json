@@ -1,0 +1,124 @@
+{
+  "skills": [
+    {
+      "name": "JavaScript",
+      "category": "Programming Language",
+      "difficulty": "Medium",
+      "learningTime": "4-6 weeks",
+      "resources": [
+        {
+          "type": "Documentation",
+          "name": "MDN Web Docs",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+        },
+        {
+          "type": "Course",
+          "name": "freeCodeCamp JavaScript",
+          "url": "https://www.freecodecamp.org"
+        },
+        {
+          "type": "Book",
+          "name": "Eloquent JavaScript",
+          "url": "https://eloquentjavascript.net"
+        }
+      ]
+    },
+    {
+      "name": "React",
+      "category": "Frontend Framework",
+      "difficulty": "Medium",
+      "learningTime": "3-4 weeks",
+      "prerequisites": ["JavaScript", "HTML", "CSS"],
+      "resources": [
+        {
+          "type": "Documentation",
+          "name": "React Official Docs",
+          "url": "https://react.dev"
+        },
+        {
+          "type": "Course",
+          "name": "React - The Complete Guide",
+          "url": "https://www.udemy.com"
+        }
+      ]
+    },
+    {
+      "name": "Node.js",
+      "category": "Backend Runtime",
+      "difficulty": "Medium",
+      "learningTime": "4-5 weeks",
+      "prerequisites": ["JavaScript"],
+      "resources": [
+        {
+          "type": "Documentation",
+          "name": "Node.js Official Docs",
+          "url": "https://nodejs.org/docs"
+        },
+        {
+          "type": "Course",
+          "name": "The Complete Node.js Developer Course",
+          "url": "https://www.udemy.com"
+        }
+      ]
+    },
+    {
+      "name": "Python",
+      "category": "Programming Language",
+      "difficulty": "Easy",
+      "learningTime": "3-4 weeks",
+      "resources": [
+        {
+          "type": "Documentation",
+          "name": "Python.org Tutorial",
+          "url": "https://docs.python.org/3/tutorial"
+        },
+        {
+          "type": "Course",
+          "name": "Complete Python Bootcamp",
+          "url": "https://www.udemy.com"
+        },
+        {
+          "type": "Book",
+          "name": "Automate the Boring Stuff",
+          "url": "https://automatetheboringstuff.com"
+        }
+      ]
+    },
+    {
+      "name": "MongoDB",
+      "category": "Database",
+      "difficulty": "Medium",
+      "learningTime": "2-3 weeks",
+      "resources": [
+        {
+          "type": "Documentation",
+          "name": "MongoDB Manual",
+          "url": "https://docs.mongodb.com"
+        },
+        {
+          "type": "Course",
+          "name": "MongoDB University",
+          "url": "https://university.mongodb.com"
+        }
+      ]
+    },
+    {
+      "name": "Docker",
+      "category": "DevOps Tool",
+      "difficulty": "Medium",
+      "learningTime": "2-3 weeks",
+      "resources": [
+        {
+          "type": "Documentation",
+          "name": "Docker Docs",
+          "url": "https://docs.docker.com"
+        },
+        {
+          "type": "Course",
+          "name": "Docker Mastery",
+          "url": "https://www.udemy.com"
+        }
+      ]
+    }
+  ]
+}
