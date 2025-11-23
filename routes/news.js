@@ -4,81 +4,52 @@ const router = express.Router();
 
 /**
  * @route   GET /api/news
- * @desc    Get latest tech news and articles
+ * @desc    Get latest tech news from HackerNews API
  * @access  Public
  */
 router.get('/', async (req, res, next) => {
   try {
-    const { category = 'technology', limit = 10 } = req.query;
+    // Step 1: Fetch top stories
+    const topStoriesResponse = await axios.get('https://hacker-news.firebaseio.com/v0/topstories.json');
+    const topStoryIds = topStoriesResponse.data;
 
-    // Sample news data (in production, integrate with news API like NewsAPI.org)
-    const sampleNews = [
-      {
-        id: 1,
-        title: 'The Future of Web Development in 2024',
-        description: 'Exploring upcoming trends in web development including AI integration and new frameworks.',
-        source: 'Tech Crunch',
-        url: 'https://example.com/article-1',
-        publishedAt: new Date().toISOString(),
-        category: 'development'
-      },
-      {
-        id: 2,
-        title: 'AI and Machine Learning: Latest Breakthroughs',
-        description: 'Recent advances in artificial intelligence and their impact on various industries.',
-        source: 'MIT Technology Review',
-        url: 'https://example.com/article-2',
-        publishedAt: new Date(Date.now() - 86400000).toISOString(),
-        category: 'ai'
-      },
-      {
-        id: 3,
-        title: 'Cloud Computing Trends for Developers',
-        description: 'How cloud technologies are shaping modern application development.',
-        source: 'InfoQ',
-        url: 'https://example.com/article-3',
-        publishedAt: new Date(Date.now() - 172800000).toISOString(),
-        category: 'cloud'
-      },
-      {
-        id: 4,
-        title: 'React 19: What\'s New and Exciting',
-        description: 'A comprehensive look at the new features in React 19.',
-        source: 'Dev.to',
-        url: 'https://example.com/article-4',
-        publishedAt: new Date(Date.now() - 259200000).toISOString(),
-        category: 'development'
-      },
-      {
-        id: 5,
-        title: 'Cybersecurity Best Practices for 2024',
-        description: 'Essential security practices every developer should know.',
-        source: 'Security Weekly',
-        url: 'https://example.com/article-5',
-        publishedAt: new Date(Date.now() - 345600000).toISOString(),
-        category: 'security'
-      }
-    ];
+    // Step 2: Select first 5 IDs
+    const selectedIds = topStoryIds.slice(0, 5);
 
-    // Filter by category if specified
-    let filteredNews = sampleNews;
-    if (category !== 'all') {
-      filteredNews = sampleNews.filter(article => 
-        article.category === category || category === 'technology'
-      );
-    }
+    // Step 3: Fetch full story for each ID
+    const storyPromises = selectedIds.map(id => 
+      axios.get(`https://hacker-news.firebaseio.com/v0/item/${id}.json`)
+    );
 
-    // Limit results
-    const limitedNews = filteredNews.slice(0, parseInt(limit));
+    const storyResponses = await Promise.all(storyPromises);
+
+    // Step 4: Format and return array of objects
+    const news = storyResponses.map(response => {
+      const story = response.data;
+      return {
+        id: story.id,
+        title: story.title,
+        url: story.url || `https://news.ycombinator.com/item?id=${story.id}`,
+        score: story.score,
+        time: story.time,
+        type: story.type,
+        by: story.by
+      };
+    });
 
     res.json({
       success: true,
-      count: limitedNews.length,
-      data: limitedNews
+      count: news.length,
+      data: news
     });
 
   } catch (error) {
-    next(error);
+    console.error('Error fetching HackerNews data:', error.message);
+    return res.status(500).json({
+      success: false,
+      message: 'Failed to fetch news from HackerNews API',
+      error: error.message
+    });
   }
 });
 
