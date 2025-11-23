@@ -2,7 +2,7 @@
   "roles": [
     {
       "id": 1,
-      "name": "Full Stack Developer",
+      "name": ["Full Stack Developer", "full stack developer"],
       "category": "Development",
       "description": "Develops both frontend and backend of web applications",
       "requiredSkills": [
@@ -21,7 +21,7 @@
     },
     {
       "id": 2,
-      "name": "Frontend Developer",
+      "name": ["Frontend Developer", "frontend developer"],
       "category": "Development",
       "description": "Creates user interfaces and client-side functionality",
       "requiredSkills": [
@@ -39,7 +39,7 @@
     },
     {
       "id": 3,
-      "name": "Backend Developer",
+      "name": ["Backend Developer", "backend developer"],
       "category": "Development",
       "description": "Builds server-side logic and database management",
       "requiredSkills": [
@@ -57,7 +57,7 @@
     },
     {
       "id": 4,
-      "name": "Data Scientist",
+      "name": ["Data Scientist", "data scientist"],
       "category": "Data Science",
       "description": "Analyzes complex data to help organizations make decisions",
       "requiredSkills": [
@@ -75,7 +75,7 @@
     },
     {
       "id": 5,
-      "name": "DevOps Engineer",
+      "name": ["DevOps Engineer", "devops engineer"],
       "category": "Operations",
       "description": "Manages infrastructure and deployment pipelines",
       "requiredSkills": [
@@ -93,7 +93,7 @@
     },
     {
       "id": 6,
-      "name": "Mobile Developer",
+      "name": ["Mobile Developer", "mobile developer"],
       "category": "Development",
       "description": "Creates applications for mobile devices",
       "requiredSkills": [

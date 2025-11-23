@@ -1,7 +1,7 @@
 {
   "roadmapTemplates": [
     {
-      "role": "Full Stack Developer",
+      "role":["Full Stack Developer","full stack developer"],
       "duration": "6-12 months",
       "difficulty": "Medium to Hard",
       "phases": [
@@ -26,7 +26,7 @@
           ]
         },
         {
-          "name": "Backend Development",
+          "name": "backend development",
           "duration": "8-10 weeks",
           "skills": ["Node.js", "Express", "MongoDB", "REST API"],
           "projects": [
@@ -48,7 +48,7 @@
       ]
     },
     {
-      "role": "Data Scientist",
+      "role": ["Data Scientist", "data scientist"],
       "duration": "8-12 months",
       "difficulty": "Hard",
       "phases": [
